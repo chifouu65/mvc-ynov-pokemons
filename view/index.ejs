@@ -1,18 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pokémon List</title>
-</head>
-<body>
-  <h1>List of Pokémons</h1>
-  <ul>
-    <% pokemons.forEach(function(pokemon) { %>
-      <li>
-        <strong><%= pokemon.name %></strong> - <%= pokemon.type %>
-      </li>
-    <% }); %>
-  </ul>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon List</title>
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        /* Corps de la page */
+        body {
+          font-family: 'Arial', sans-serif;
+          background-color: #f0f8ff;
+          color: #333;
+          margin: 20px;
+          padding: 20px;
+        }
+        
+        /* Titre principal */
+        h1 {
+          text-align: center;
+          font-size: 2.5em;
+          color: #4CAF50;
+          margin-bottom: 20px;
+        }
+        
+        /* Liste des Pokémons */
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        
+        li {
+          background-color: #fff;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          margin: 10px 0;
+          padding: 15px;
+          transition: all 0.3s ease;
+        }
+        
+        li:hover {
+          background-color: #e8f5e9;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Détails des Pokémons */
+        li strong {
+          font-size: 1.5em;
+          color: #2196F3;
+        }
+        
+        li span {
+          font-size: 1.2em;
+          color: #ff9800;
+          font-weight: bold;
+        }
+        
+        /* Styling pour le conteneur de la liste */
+        .container {
+          max-width: 900px;
+          margin: 0 auto;
+        }
+        
+        /* Style des boutons si tu veux en ajouter */
+        button {
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+          background-color: #45a049;
+        }
+        
+        .error {
+          color: red;
+          font-weight: bold;
+          text-align: center;
+          margin-top: 20px;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>List of Pokémons</h1>
+      <ul>
+        <% pokemons.forEach(function(pokemon) { %>
+          <li>
+            <strong><%= pokemon.name %></strong> - <span><%= pokemon.type %></span>
+          </li>
+        <% }); %>
+      </ul>
+    </div>
+  </body>
 </html>
