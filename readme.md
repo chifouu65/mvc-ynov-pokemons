@@ -74,9 +74,6 @@ Ce fichier s'occupe de la connexion à la base de données MySQL et de la récup
 
 Ce fichier est la vue qui est rendue avec les données des Pokémons. Il utilise le moteur de templates EJS.
 
-#### Dossier `data/` (facultatif)
-
-Si vous préférez utiliser des données locales au lieu de la base de données, vous pouvez ajouter un fichier `pokemons.json` dans ce dossier pour simuler une base de données.
 
 ### 6. Démarrer l'application
 
@@ -101,8 +98,6 @@ pokemons/
 │   └── pokemonModel.js             # Modèle pour la gestion de la base de données
 ├── view/
 │   └── index.ejs                   # Vue pour afficher les Pokémons
-├── data/
-│   └── pokemons.json               # (Facultatif) Données locales
 ├── server.js                        # Fichier principal du serveur Node.js
 ├── package.json                    # Fichier de configuration de Node.js
 └── package-lock.json               # Fichier des dépendances
@@ -118,23 +113,11 @@ pokemons/
 
 - **`index.ejs`** : Utilise le moteur de template **EJS** pour afficher la liste des Pokémons.
 
-### 9. Personnalisation
 
-Si tu souhaites ajouter plus de fonctionnalités, voici quelques suggestions :
-
-- **Ajouter une interface d'administration** pour ajouter, supprimer ou modifier les Pokémons.
-- **Utiliser un système d'authentification** pour restreindre l'accès à l'administration.
-- **Ajouter une page pour afficher les détails d'un Pokémon** en cliquant sur son nom dans la liste.
-- **Améliorer la gestion des erreurs** (par exemple, si la base de données est injoignable).
-
-### 10. Problèmes connus
+### 9. Problèmes connus
 
 - **Erreur de connexion à MySQL** : Si vous avez des problèmes de connexion à la base de données MySQL, vérifiez que **MySQL** est bien démarré dans **XAMPP** et que les informations de connexion dans `pokemonModel.js` sont correctes.
   
 - **Problème de `npm install`** : Si vous obtenez des erreurs lors de l'installation des dépendances avec **npm**, assurez-vous que votre version de **Node.js** et **npm** est à jour.
 
----
 
-### 11. Licence
-
-Ce projet est sous la **MIT License**.
