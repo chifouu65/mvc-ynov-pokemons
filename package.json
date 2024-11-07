@@ -1,0 +1,21 @@
+{
+  "name": "pokemons",
+  "version": "1.0.0",
+  "description": "Ce projet a pour but de transformer un code PHP procédural en une application basée sur l'architecture **MVC** (Modèle-Vue-Contrôleur) et d'utiliser **JavaScript** pour afficher dynamiquement les données. L'application permet de récupérer et afficher la liste des pokémons depuis une base de données MySQL.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "mysql2": "^3.11.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
